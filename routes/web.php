@@ -30,7 +30,9 @@ use App\Http\Controllers\DashboardController;
 
     Route::resource('/stadium', \App\Http\Controllers\StadiumController::class);
 
-    Route::resource('/penyakit', \App\Http\Controllers\PenyakitController::class);
+    Route::get("/edit", [PenyakitController::class, "edit"]);
+    Route::put("/simpan/{id}", [PenyakitController::class, "update"]);
+    Route::resource('/penyakit', PenyakitController::class);
     // // Route::get('/admin/penyakit/edit', \App\Http\Controllers\PenyakitController::class, 'edit');
     // // Route::get('/penyakit', \App\Http\Controllers\PenyakitController::class);
     // // Route::resource('/penyakit', \App\Http\Controllers\PenyakitController::class);
