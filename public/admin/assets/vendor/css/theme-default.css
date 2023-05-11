@@ -207,14 +207,14 @@ button.list-group-item-primary.active {
 
 .btn-primary {
   color: #fff;
-  background-color: #9F0128;
-  border-color: #9F0128;
+  background-color: #92140c;
+  border-color: #92140c;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #c20b39;
-  border-color: #9F0128;
+  background-color: #1e1e24;
+  border-color: #1e1e24;
   transform: translateY(-1px);
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus, .btn-primary.focus {
@@ -633,7 +633,7 @@ a:hover {
 }
 
 .layout-navbar {
-  background-color: #9F0128 !important;
+  background-color: #92140c !important;
   -webkit-backdrop-filter: saturate(200%) blur(6px);
           backdrop-filter: saturate(200%) blur(6px);
 }
@@ -649,8 +649,8 @@ a:hover {
 }
 
 .bg-menu-theme {
-  background-color: #9F0128 !important;
-  color: #fff;
+  background-color: #92140c !important;
+  color: #1e1e24;
 }
 .bg-menu-theme .menu-link,
 .bg-menu-theme .menu-horizontal-prev,
@@ -662,7 +662,7 @@ a:hover {
 .bg-menu-theme .menu-horizontal-prev:focus,
 .bg-menu-theme .menu-horizontal-next:hover,
 .bg-menu-theme .menu-horizontal-next:focus {
-  color: #fff;
+  color: #1e1e24;
 }
 .bg-menu-theme .menu-link.active,
 .bg-menu-theme .menu-horizontal-prev.active,
@@ -693,7 +693,7 @@ a:hover {
   color: #fff;
 }
 .bg-menu-theme .menu-inner-shadow {
-  background: linear-gradient(#fff 41%, rgba(255, 255, 255, 0.11) 95%, rgba(255, 255, 255, 0));
+  background: linear-gradient(#fff 41%, rgba(3, 138, 37, 0.11) 95%, rgba(255, 255, 255, 0));
 }
 .bg-menu-theme .menu-text {
   color: #fff;
@@ -755,7 +755,7 @@ html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item .menu-lin
   background: #696cff;
 }
 .bg-menu-theme .menu-sub > .menu-item > .menu-link:before {
-  background-color: #b4bdc6 !important;
+  background-color: #b4c6b5 !important;
 }
 .bg-menu-theme .menu-sub > .menu-item.active > .menu-link:not(.menu-toggle):before {
   background-color: #696cff !important;
@@ -763,7 +763,7 @@ html:not(.layout-menu-collapsed) .bg-menu-theme .menu-inner .menu-item .menu-lin
 }
 
 .app-brand .layout-menu-toggle {
-  background-color: #9F0128;
+  background-color: #92140c;
   border: 7px solid #f5f5f9;
 }
 .app-brand .layout-menu-toggle i {

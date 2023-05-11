@@ -10,28 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Space Dynamic - SEO HTML5 Template</title>
+    <title>Sistem Pakar Diagnosa</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/../../user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('user/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="/../../user/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="/../../user/assets/css/templatemo-space-dynamic.css">
-    <link rel="stylesheet" href="/../../user/assets/css/animated.css">
-    <link rel="stylesheet" href="/../../user/assets/css/owl.css">
-<!--
-    
-TemplateMo 562 Space Dynamic
+    <link rel="stylesheet" href="{{asset('user/assets/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('user/assets/css/templatemo-space-dynamic.css')}}">
+    <link rel="stylesheet" href="{{asset('user/assets/css/animated.css')}}">
+    <link rel="stylesheet" href="{{asset('user/assets/css/owl.css')}}">
 
-https://templatemo.com/tm-562-space-dynamic
-
--->
   </head>
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
+  {{-- <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -42,72 +36,20 @@ https://templatemo.com/tm-562-space-dynamic
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
+  <!-- ***** Preloader End ***** --> --}}
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <h4>Spac<span>Dyna</span></h4>
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Beranda</a></li>
-              <li class="scroll-to-section"><a href="#about">Tentang Kami</a></li>
-              <li class="scroll-to-section"><a href="#services">Edukasi Seks</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Tutorial</a></li>
-              <li class="scroll-to-section"><a href="#blog"></a></li> 
-              <li class="scroll-to-section"><a href="#contact">Message Us</a></li> 
-              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Konsultasi</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
+@include('pasien.partials.navbar');
 
-  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <h6>Selamat datang di SP-HIV/AIDS</h6>
-                <h2>Sistem Pakar <em>Diagosa</em> <span>HIV/AIDS</span></h2>
-                <p>Space Dynamic is a professional looking HTML template using a Bootstrap 5 (beta 2). This CSS template is free for you provided by <a rel="nofollow" href="https://templatemo.com/page/1" target="_parent">TemplateMo</a>.</p>
-                <form id="search" action="#" method="GET">
-                  <fieldset>
-                    <input type="address" name="address" class="email" placeholder="Your website URL..." autocomplete="on" required>
-                  </fieldset>
-                  <fieldset>
-                    <button type="submit" class="main-button">Analyze Site</button>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="user/assets/images/banner-right-image.png" alt="team meeting">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="about" class="about-us section">
+<div>
+  @yield('home')
+</div>
+<div>
+  @yield('tentang')
+</div>
+<div>
+  @yield('sexedu')
+</div>
+  {{-- <div id="about" class="about-us section">
     <div class="container">
       <div class="row">
         <div class="col-lg-4">
@@ -167,9 +109,9 @@ https://templatemo.com/tm-562-space-dynamic
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-  <div id="services" class="our-services section">
+  {{-- <div id="services" class="our-services section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
@@ -211,9 +153,9 @@ https://templatemo.com/tm-562-space-dynamic
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
-  <div id="portfolio" class="our-portfolio section">
+  {{-- <div id="portfolio" class="our-portfolio section">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
@@ -277,7 +219,7 @@ https://templatemo.com/tm-562-space-dynamic
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
 
   <div id="blog" class="our-blog section">
     <div class="container">
@@ -415,12 +357,12 @@ https://templatemo.com/tm-562-space-dynamic
     </div>
   </footer>
   <!-- Scripts -->
-  <script src="/../../user/vendor/jquery/jquery.min.js"></script>
-  <script src="/../../user/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/../../user/assets/js/owl-carousel.js"></script>
-  <script src="/../../user/assets/js/animation.js"></script>
-  <script src="/../../user/assets/js/imagesloaded.js"></script>
-  <script src="/../../user/assets/js/templatemo-custom.js"></script>
+  <script src="{{asset('user/vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{asset('user/vendor/bootstrap/js/bootstrap.bundle.min.js">')}}"></script>
+  <script src="{{asset('user/assets/js/owl-carousel.js')}}"></script>
+  <script src="{{asset('user/assets/js/animation.js')}}"></script>
+  <script src="{{asset('user/assets/js/imagesloaded.js')}}"></script>
+  <script src="{{asset('user/assets/js/templatemo-custom.js')}}"></script>
 
 </body>
 </html>

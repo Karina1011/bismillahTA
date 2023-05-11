@@ -1,12 +1,11 @@
 @extends('admin.dashboard')
 @section('gejala')
 
-<hr class="my-5" />
 <!-- Bordered Table -->
  <!-- Content wrapper -->
  <div class="content-wrapper">
   <div class="container-xxl flex-grow-1 container-p-y">
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tables /</span> Basic Tables</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Tabel /</span> Gejala</h4>
   <!-- Content wrapper -->
   <div class="content-wrapper">
     <div class="container-xxl flex-grow-1 container-p-y">
@@ -27,36 +26,26 @@
                   </tr>
                 </thead>
               </thead>
-              <tbody id="table-gejala">
+              <tbody>
                 @forelse ($gejalas as $gejala)
                   <tr>
-                  <td>{{ $gejala->nama_gejala }}</td>
-                  <td>{{ $post->kd_gejala }}</td>
-                  <td>
-                    <div class="dropdown">
-                      <button
-                        type="button"
-                        class="btn p-0 dropdown-toggle hide-arrow"
-                        data-bs-toggle="dropdown"
-                      >
-                        <i class="bx bx-dots-vertical-rounded"></i>
-                      </button>
-                      <div class="dropdown-menu"  onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('gejalas.destroy', $gejala->id) }}" method="POST">>
-                        <a class="dropdown-item" href="{{ route('gejalas.edit', $gejala->id) }}"
-                          ><i class="bx bx-edit-alt me-1"></i> Edit</a
-                        >
-                        @csrf
-                        @method('DELETE')
-                        <a class="dropdown-item"
-                          ><i class="bx bx-trash me-1"></i> Delete</a
-                        >
-                      </div>
-                  </td>
-                  @empty
-                  <div class="alert alert-danger">
-                    Data Post belum Tersedia.
-                </div>
-                  @endforelse
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $gejala->nama_gejala }}</td>
+                      <td>{!! $gejala->kd_gejala !!}</td>
+                      <td class="text-center">
+                          <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('gejala.destroy', $gejala->id) }}" method="POST">
+                              <a href="{{ route('gejala.edit', $gejala->id) }}" class="btn btn-sm btn-primary">EDIT</a>
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
+                          </form>
+                      </td>
+                  </tr>
+                @empty
+                    <div class="alert alert-danger">
+                        Data Gejala belum Tersedia.
+                    </div>
+                @endforelse
               </tbody>
               </table>
             </div>

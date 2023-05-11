@@ -36,6 +36,44 @@ class GejalaController extends Controller
         ]);
 
         //redirect to gejala
-        return redirect()->route('admin.gejala.gejala')->with(['success' => 'Data Berhasil Disimpan!']);
+        return redirect()->route('')->with(['success' => 'Data Berhasil Disimpan!']);
+        // return redirect()->back();
     }
+
+    // ===================== Edit =====================
+    public function edit(Gejala $gejala)
+    {
+        return view('admin.gejala.edit', compact('gejala'));
+    }
+
+    //================== Update =========================
+    public function update(Request $request, Gejala $gejala)
+    {
+        //validate form
+        $this->validate($request, [
+            'nama_gejala'     => 'required',
+            'kd_gejala'   => 'required'
+        ]);
+
+         //update post without image
+         $gejala->update([
+            'nama_gejala'     => $request->nama_gejala,
+            'kd_gejala'   => $request->kd_gejala
+        ]);
+
+        //redirect to index
+        return redirect()->route('admin.gejala.gejala')->with(['success' => 'Data Berhasil Diubah!']);
+    }
+
+    //========== Hapus ============
+    public function destroy(Gejala $gejala)
+    {
+        //delete gejala
+        $gejala->delete();
+
+        //redirect to index
+        // return redirect()->route('admin.gejala.gejala')->with(['success' => 'Data Berhasil Dihapus!']);
+        return back();
+    }
+
 }

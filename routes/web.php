@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PenyakitController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,17 +19,30 @@ use Illuminate\Support\Facades\Route;
     // return view('welcome');
 
     Route::get('/', function () {
-        return view('admin/dashboard');
+        return view('pasien/layouts/home');
     });
+
+    Route::get('/pasien/layouts/tentang', [dashboardController::class, 'tentang']);
+    Route::get('/pasien/layouts/edukasi', [dashboardController::class, 'edukasi']);
+
     //======Gejala=====
     Route::resource('/gejala', \App\Http\Controllers\GejalaController::class);
 
-    Route::get('stadium', function () {
-        return view('admin/stadium/stadium');
-    });
-    Route::get('tambah-penyakit', function () {
-        return view('admin/stadium/create');
-    });
+    Route::resource('/stadium', \App\Http\Controllers\StadiumController::class);
+
+    Route::resource('/penyakit', \App\Http\Controllers\PenyakitController::class);
+    // // Route::get('/admin/penyakit/edit', \App\Http\Controllers\PenyakitController::class, 'edit');
+    // // Route::get('/penyakit', \App\Http\Controllers\PenyakitController::class);
+    // // Route::resource('/penyakit', \App\Http\Controllers\PenyakitController::class);
+    
+    // Route::get("/admin/penyakit/edit", [PenyakitControllers::class, "edit"]);
+    // Route::get("/admin/penyakit/simpan", [PenyakitControllers::class, "update"]);
+    // Route::resource("/penyakit", PenyakitControllers::class);
+    // Route::get("/penyakit/{id}", [PenyakitControllers::class, "destroy"]);
+
+    // Route::get('tambah-penyakit', function () {
+    //     return view('admin/stadium/create');
+    // });
     Route::get('user', function () {
         return view('admin/user');
     });
